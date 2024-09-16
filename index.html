@@ -1,4 +1,4 @@
-<img src="IMG_7775.png" class="center">
+<img src="IMG_7775.png" id="logo" class="center">
 <div class="firstBack"></div>
 <style>
 .firstBack {
@@ -41,5 +41,12 @@ body {
 </style>
 
 <script>
-  
+  logo = document.getElementById("logo");
+  for (i = 0; i < 100; i++) {
+    setTimeout(slide, 5);
+  }
+  function slide() {
+    logo.style.opacity = logo.style.opacity + 0.01;
+    logo.style.top = (parseInt(logo.style.top.toString().substring(0, 1)) + 0.1).toString().concat("%");
+  }
 </script>
