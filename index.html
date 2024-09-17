@@ -5,7 +5,7 @@
 <style>
 .floater {
   width: 100vw;
-  top: 100vh;
+  top: 50vh;
   height: auto;
   position: absolute;
 }
@@ -51,10 +51,11 @@ body {
     document.getElementById("logo").style.top = startingT.toString().concat("%");
     document.getElementById("logo").style.opacity = startingO.toString();
   }
+  ratio = width.innerWidth / width.innerHeight;
   function parallax() {
     var s = document.getElementById("floater");
   var yPos = 0 - window.pageYOffset/5;  
-  s.style.top = 50 + yPos + "%"; }
+  s.style.top = 50 + yPos * ratio + "vw"; }
 
 window.addEventListener("scroll", function(){
     parallax(); 
