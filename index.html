@@ -51,11 +51,11 @@ body {
     document.getElementById("logo").style.top = startingT.toString().concat("%");
     document.getElementById("logo").style.opacity = startingO.toString();
   }
-  ratio = width.innerWidth / width.innerHeight;
+  ratio = width.innerHeight / width.innerWidth;
   function parallax() {
     var s = document.getElementById("floater");
   var yPos = 0 - window.pageYOffset/5;  
-  s.style.top = 50 + yPos * ratio + "vw"; }
+  s.style.top = (50 * ratio) + yPos * ratio + "vw"; }
 
 window.addEventListener("scroll", function(){
     parallax(); 
