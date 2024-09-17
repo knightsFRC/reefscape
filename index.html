@@ -42,6 +42,7 @@ body {
 <p id=test>hi</p>
 <script>
   topDist = 60;
+  window.onload = function() {
   logo = document.getElementById("logo");
   for (i = 0; i < 100; i++) {
     setTimeout(slide, 5);
@@ -49,5 +50,6 @@ body {
   function slide() {
     topDist -= 0.1;
     logo.style.top = topDist.toString().concat("%");
+  }
   }
 </script>
