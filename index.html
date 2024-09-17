@@ -41,12 +41,13 @@ body {
 </style>
 <p id=test>hi</p>
 <script>
+  topDist = 60;
   logo = document.getElementById("logo");
   for (i = 0; i < 100; i++) {
     setTimeout(slide, 5);
   }
   function slide() {
-    document.getElementById("test").innerHTML = (parseInt(logo.style.top.substring(0, 2)) - 0.1).toString().concat("%");
-    logo.style.top = (parseInt(logo.style.top.toString().substring(0, 2)) - 0.1).toString().concat("%");
+    topDist -= 0.1;
+    logo.style.top = topDist.toString().concat("%");
   }
 </script>
