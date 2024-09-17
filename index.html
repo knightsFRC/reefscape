@@ -55,7 +55,7 @@ body {
   function parallax() {
     var s = document.getElementById("floater");
   var yPos = 0 - window.pageYOffset/5;  
-  s.style.top = 50 + yPos + "vh"; }
+  s.style.top = (50 + yPos).toString() + "vh"; }
 
 window.addEventListener("scroll", function(){
     parallax(); 
