@@ -34,16 +34,8 @@ body {
   for (i = 0; i < 100; i++) {
     if (i < 50) {
     setTimeout(slide, i * 5);
-    } else if (i < 60) {
-    setTimeout(slide, i * 6);
-    } else if (i < 70) {
-    setTimeout(slide, i * 7);
-    } else if (i < 80) {
-    setTimeout(slide, i * 8);
-    } else if (i < 90) {
-    setTimeout(slide, i * 9);
     } else {
-    setTimeout(slide, i * 10);
+    setTimeout(slide, i * 5 * i/50);
     }
   }
   function slide() {
