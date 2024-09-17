@@ -1,10 +1,12 @@
 
 <div class="firstBack"></div>
 <img src="IMG_7775.png" class="center" id="logo">
+<img src="IMG_7794.png" class="floater" id="floater">
 <style>
+
 .firstBack {
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   position: relative;
   background-size: cover;
   background-image: url("Add a heading.png");
@@ -44,4 +46,12 @@ body {
     document.getElementById("logo").style.top = startingT.toString().concat("%");
     document.getElementById("logo").style.opacity = startingO.toString();
   }
+  function parallax() {
+    var s = document.getElementById("floater");
+  var yPos = 0 - window.pageYOffset/5;  
+  s.style.top = 50 + yPos + "%"; }
+
+window.addEventListener("scroll", function(){
+    parallax(); 
+});
 </script>
