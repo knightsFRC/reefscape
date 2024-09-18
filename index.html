@@ -2,7 +2,7 @@
 <html>
 <body>
 <div class="firstBack"></div>
-<div class="center"><img src="IMG_7775.png" class="centerChild" id="logo"></div>
+<div id="div" class="center"><img src="IMG_7775.png" class="centerChild" id="logo"></div>
 <img src="IMG_7794.png" class="floater" id="floater">
 <style>
 .floater {
@@ -59,7 +59,7 @@ body {
   function slide() {
     startingO += 0.01;
     startingT -= 0.1;
-    document.getElementById("logo").style.top = startingT.toString().concat("%");
+    document.getElementById("div").style.top = startingT.toString().concat("%");
     document.getElementById("logo").style.opacity = startingO.toString();
   }
   ratio = window.innerWidth / window.innerHeight;
@@ -72,6 +72,7 @@ body {
 window.addEventListener("scroll", function(){
     parallax(); 
 });
+  /*
 window.addEventListener("scroll", function() {
   var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
   
@@ -87,10 +88,9 @@ window.addEventListener("scroll", function() {
     logoEl.style.position = "absolute";
     logoEl.style.top = 50 + "%";
     logoEl.style.width = 70 + "%";
-    
   }
-  
 });
+*/
 </script>
 </body>
 </html>
