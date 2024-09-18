@@ -70,7 +70,7 @@ window.addEventListener("scroll", function() {
   topDistance = logoEl.getBoundingClientRect().top.toFixed();
   if (topDistance < 0) {
     logoEl.style.position = "fixed";
-    logoEl.style.top = 0;
+    logoEl.style.top = 15.13 + "%";
     logoEl.style.width = 30 + "%";
   } else if (topDistance < 21) {
     logoEl.style.width =  70 - ((1 / topDistance) * 40) + "%";
