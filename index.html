@@ -66,18 +66,21 @@ window.addEventListener("scroll", function(){
     parallax(); 
 });
 window.addEventListener("scroll", function() {
+  var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+  
   logoEl = document.getElementById("logo");
-  topDistance = logoEl.getBoundingClientRect().top.toFixed();
-  if (topDistance < 0) {
+  topDistance = window.pageYOffset;
+  if (topDistance > 800) {
     logoEl.style.position = "fixed";
     logoEl.style.top = 15.13 + "%";
     logoEl.style.width = 30 + "%";
-  } else if (topDistance < 21) {
-    logoEl.style.width =  70 - ((1 / topDistance) * 40) + "%";
+  } else if (topDistance > 700) {
+    logoEl.style.width =  70 - ((1 / (topDistance - 700)) * 40) + "%";
   } else {
     logoEl.style.position = "absolute";
     logoEl.style.top = 50 + "%";
     logoEl.style.width = 70 + "%";
+    
   }
 });
 </script>
