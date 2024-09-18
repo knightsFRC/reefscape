@@ -70,11 +70,11 @@ window.addEventListener("scroll", function() {
   
   logoEl = document.getElementById("logo");
   topDistance = window.pageYOffset;
-  if (topDistance > 800) {
+  if (topDistance > window.innerHeight * 1.6) {
     logoEl.style.position = "fixed";
     logoEl.style.top = 15.13 + "%";
     logoEl.style.width = 30 + "%";
-  } else if (topDistance > 700) {
+  } else if (topDistance > window.innerHeight * 1.5) {
     logoEl.style.width =  70 - ((1 / (topDistance - 700)) * 40) + "%";
   } else {
     logoEl.style.position = "absolute";
