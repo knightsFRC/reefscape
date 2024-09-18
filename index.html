@@ -1,4 +1,6 @@
-
+<!DOCTYPE html>
+<html>
+<body>
 <div class="firstBack"></div>
 <img src="IMG_7775.png" class="center" id="logo">
 <img src="IMG_7794.png" class="floater" id="floater">
@@ -36,6 +38,7 @@ body {
   
 </style>
 <script>
+  
   startingO = 0;
   startingT = 60;
   for (i = 0; i < 100; i++) {
@@ -51,12 +54,16 @@ body {
     document.getElementById("logo").style.top = startingT.toString().concat("%");
     document.getElementById("logo").style.opacity = startingO.toString();
   }
+  ratio = window.innerHeight / window.innerWidth;
+  document.getElementById("floater").style.top = 50 * ratio + "vw";
   function parallax() {
     var s = document.getElementById("floater");
   var yPos = 0 - window.pageYOffset/5;  
-  s.style.top = 50 + yPos + "%"; }
-
+  s.style.top = 50 * ratio + yPos * ratio + "vw"; }
+  
 window.addEventListener("scroll", function(){
     parallax(); 
 });
 </script>
+</body>
+</html>
