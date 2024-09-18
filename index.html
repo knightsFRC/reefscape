@@ -2,7 +2,7 @@
 <html>
 <body>
 <div class="firstBack"></div>
-<img src="IMG_7775.png" class="center" id="logo">
+<div class="center"><img src="IMG_7775.png" class="centerChild" id="logo"></div>
 <img src="IMG_7794.png" class="floater" id="floater">
 <style>
 .floater {
@@ -22,6 +22,11 @@
 body {
   padding: 0;
   margin: 0;
+}
+.centerChild {
+  width: 70vw;
+  height: auto;
+  position: sticky;
 }
   .center {
   width: 70vw;
@@ -67,7 +72,7 @@ window.addEventListener("scroll", function(){
 });
 window.addEventListener("scroll", function() {
   var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-  
+  /*
   logoEl = document.getElementById("logo");
   topDistance = window.pageYOffset;
   if (topDistance > window.innerHeight * 0.4) {
@@ -82,7 +87,9 @@ window.addEventListener("scroll", function() {
     logoEl.style.width = 70 + "%";
     
   }
+  
 });
+*/
 </script>
 </body>
 </html>
