@@ -37,6 +37,7 @@ body {
 }
   
 </style>
+  <p id="test">hi</p>
 <script>
   
   startingO = 0;
@@ -55,6 +56,7 @@ body {
     document.getElementById("logo").style.opacity = startingO.toString();
   }
   ratio = window.innerHeight / window.innerWidth;
+  document.getElementById("test").innerHTML = ratio;
   document.getElementById("floater").style.top = 50 * ratio + "vw";
   function parallax() {
     var s = document.getElementById("floater");
