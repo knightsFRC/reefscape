@@ -55,13 +55,12 @@ body {
     document.getElementById("logo").style.top = startingT.toString().concat("%");
     document.getElementById("logo").style.opacity = startingO.toString();
   }
-  ratio = window.innerHeight / window.innerWidth;
+  ratio = window.innerWidth / window.innerHeight;
   document.getElementById("test").innerHTML = ratio;
-  document.getElementById("floater").style.top = 50 * ratio + "vw";
   function parallax() {
     var s = document.getElementById("floater");
   var yPos = 0 - window.pageYOffset/5;  
-  s.style.top = 50 * ratio + yPos * ratio + "vw"; }
+  s.style.top = 50 * ratio + yPos * ratio + "vh"; }
   
 window.addEventListener("scroll", function(){
     parallax(); 
