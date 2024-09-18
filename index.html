@@ -65,6 +65,19 @@ body {
 window.addEventListener("scroll", function(){
     parallax(); 
 });
+window.addEventListener("scroll", function() {
+  logoEl = document.getElementById("logo");
+  topDistance = logoEl.getBoundingClientRect().top.toFixed();
+  if (topDistance < 0) {
+    logoEl.style.position = "fixed";
+    logoEl.style.top = 0;
+  } else if (topDistance < 21) {
+    logoEl.style.width =  70 - ((1 / topDistance) * 40) + "%";
+  } else {
+    logoEl.style.position = "absolute";
+    logoEl.style.top = 75 + "vh";
+  }
+});
 </script>
 </body>
 </html>
