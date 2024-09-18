@@ -7,7 +7,7 @@
 <style>
 .floater {
   width: 100vw;
-  top: 50vh;
+  top: 75vw;
   height: auto;
   position: absolute;
 }
@@ -60,7 +60,7 @@ body {
   function parallax() {
     var s = document.getElementById("floater");
   var yPos = 0 - window.pageYOffset/5;  
-  s.style.top = 50 * ratio + yPos * ratio + "vh"; }
+  s.style.top = 75 + yPos * ratio + "vh"; }
   
 window.addEventListener("scroll", function(){
     parallax(); 
