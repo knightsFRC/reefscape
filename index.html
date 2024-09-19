@@ -53,18 +53,23 @@ body {
   phase = 0;
   menu = document.getElementById("menuToggler");
   function toggle() {
-    if (menu.src == "IMG_7803.png") {
+    if (phase == 0) {
       for (i = 0; i < 5; i++) {
-        setTimeout(nextFrame(i), i * 50);
+        setTimeout(nextFrame(i, true), i * 50);
       }
-    } else if (menu.src == "IMG_7808.png") {
-      for (i = 0; i < 5; i++) {
-        setTimeout(nextFrame(4 - i), i * 50);
+    } else if (phase == 5) {
+      for (i = 0; i < 6; i++) {
+        setTimeout(nextFrame(5 - i, false), i * 50);
       }
     } else {}
   }
-  function nextFrame(frame) {
+  function nextFrame(frame, up) {
     menu.src = "IMG_780".concat((frame + 3).toString(), ".png");
+    if (up == true) {
+      phase += 1;
+    } else {
+      phase -= 1;
+    }
   }
   startingO = 0;
   startingT = 60;
