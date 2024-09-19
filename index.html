@@ -4,7 +4,16 @@
 <div class="firstBack"></div>
 <img src="IMG_7775.png" class="center" id="logo">
 <img src="IMG_7794.png" class="floater" id="floater">
+<img class="menuToggle" src="IMG_7803.png" onclick="toggle()">
 <style>
+  .menuToggle {
+    position: fixed;
+    width: 5vw;
+    height: auto;
+    top: 0;
+    margin: 0;
+    left: 95vw;
+  }
 .floater {
   width: 100vw;
   top: 75vh;
@@ -41,7 +50,9 @@ body {
 </style>
   <p id="test">hi</p>
 <script>
-  
+  function toggle() {
+    
+  }
   startingO = 0;
   startingT = 60;
   for (i = 0; i < 100; i++) {
