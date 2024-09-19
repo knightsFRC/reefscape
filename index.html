@@ -2,7 +2,7 @@
 <html>
 <body>
 <div class="firstBack"></div>
-<div id="div" class="center"><img src="IMG_7775.png" class="centerChild" id="logo"></div>
+<img src="IMG_7775.png" class="center" id="logo">
 <img src="IMG_7794.png" class="floater" id="floater">
 <style>
 .floater {
@@ -27,21 +27,13 @@ body {
   width: 70vw;
   position: absolute;
   z-index: 200;
-  opacity: 1;
+  opacity: 0;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   height: 100%;
-    .centerChild {
-    top: 0;
-    left: 0;
-    width: 70vw;
-    height: auto;
-    margin: 0;
-    position: sticky;
-    z-index: 2000;
-    opacity: 0;
+  margin: 0;
   }
 }
 
