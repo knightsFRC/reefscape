@@ -4,15 +4,15 @@
 <div class="firstBack"></div>
 <img src="IMG_7775.png" class="center" id="logo">
 <img src="IMG_7794.png" class="floater" id="floater">
-<img class="menuToggle" src="IMG_7803.png" onclick="toggle()">
+<img class="menuToggle" id="menuToggler" src="IMG_7803.png" onclick="toggle()">
 <style>
   .menuToggle {
     position: fixed;
-    width: 5vw;
+    width: 10vw;
     height: auto;
     top: 0;
     margin: 0;
-    left: 95vw;
+    left: 90vw;
   }
 .floater {
   width: 100vw;
@@ -50,8 +50,21 @@ body {
 </style>
   <p id="test">hi</p>
 <script>
+  phase = 0;
+  menu = document.getElementById("menuToggler");
   function toggle() {
-    
+    if (menu.src == "IMG_7803.png") {
+      for (i = 0; i < 5; i++) {
+        setTimeout(nextFrame(i), i * 50);
+      }
+    } else if (menu.src == "IMG_7808.png") {
+      for (i = 0; i < 5; i++) {
+        setTimeout(nextFrame(4 - i), i * 50);
+      }
+    } else {}
+  }
+  function nextFrame(frame) {
+    menu.src = "IMG_780".concat((frame + 3).toString(), ".png");
   }
   startingO = 0;
   startingT = 60;
