@@ -89,17 +89,17 @@ body {
       }
       menuAt.style.left = 75 + "%";
       menu.style.left = 65 + "%";
-      document.getElementById("darken").opacity = 1;
-      document.getElementById("darken").zIndex = "195";
+      document.getElementById("darken").style.opacity = 1;
+      document.getElementById("darken").style.zIndex = "195";
     } else if (phase == 6) {
       for (i = 0; i < 6; i++) {
         setTimeout(nextFrame, ((i + 1) * 50), 6 - i, false);
       }
       menuAt.style.left = 100 + "%";
       menu.style.left = 90 + "%";
-      document.getElementById("darken").opacity = 0;
+      document.getElementById("darken").style.opacity = 0;
       setTimeout(function() {
-      document.getElementById("darken").zIndex = "-200";
+      document.getElementById("darken").style.zIndex = "-200";
       }, 300);
     } else {}
   }
