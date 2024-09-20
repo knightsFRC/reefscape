@@ -68,13 +68,13 @@ body {
       for (i = 0; i < 6; i++) {
         setTimeout(nextFrame, ((i + 1) * 50), i + 1, true);
       }
-      document.getElementById("menu").style.left = 75 + "vw";
+      
       }
     } else if (phase == 6) {
       for (i = 0; i < 6; i++) {
         setTimeout(nextFrame, ((i + 1) * 50), 6 - i, false);
       }
-      document.getElementById("menu").style.left = 100 + "vw";
+      
     } else {}
   }
   function nextFrame(frame, up) {
