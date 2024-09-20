@@ -4,7 +4,7 @@
 <div class="firstBack"></div>
 <img src="IMG_7775.png" class="center" id="logo">
 <img src="IMG_7794.png" class="floater" id="floater">
-<div class="menu" id="menu"><img class="menuToggle" id="menuToggler" src="IMG_7803.png" onclick="toggle()"></div>
+<div class="menu" id="yasa"><img class="menuToggle" id="menuToggler" src="IMG_7803.png" onclick="toggle()"></div>
 <style>
   .menu {
     position: fixed;
@@ -68,13 +68,13 @@ body {
       for (i = 0; i < 6; i++) {
         setTimeout(nextFrame, ((i + 1) * 50), i + 1, true);
       }
-      document.getElementById("menu").style.left = 75 + "%";
+      document.getElementById("yasa").style.left = 75 + "%";
       }
     } else if (phase == 6) {
       for (i = 0; i < 6; i++) {
         setTimeout(nextFrame, ((i + 1) * 50), 6 - i, false);
       }
-      document.getElementById("menu").style.left = 100 + "%";
+      document.getElementById("yasa").style.left = 100 + "%";
     } else {}
   }
   function nextFrame(frame, up) {
