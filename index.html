@@ -6,10 +6,13 @@
 <img src="IMG_7794.png" class="floater" id="floater">
 <img class="menuToggle" id="menuToggler" src="IMG_7803.png" onclick="toggle()">
 <div class="menu" id="menu"></div>
+<img src="IMG_7822.png" class="darken" id="darken">
 <style>
   .darken {
     pointer-events: none;
     z-index: -200;
+    opacity: 0;
+    transition: opacity 0.3s;
   }
   .menu {
     position: fixed;
@@ -80,12 +83,18 @@ body {
       }
       menuAt.style.left = 75 + "%";
       menu.style.left = 65 + "%";
+      document.getElementById("darken").opacity = 1;
+      document.getElementById("darken").zIndex = 195;
     } else if (phase == 6) {
       for (i = 0; i < 6; i++) {
         setTimeout(nextFrame, ((i + 1) * 50), 6 - i, false);
       }
       menuAt.style.left = 100 + "%";
       menu.style.left = 90 + "%";
+      document.getElementById("darken").opacity = 0;
+      setTimeout(function() {
+      document.getElementById("darken").zIndex = -200;
+      }, 300);
     } else {}
   }
   function nextFrame(frame, up) {
