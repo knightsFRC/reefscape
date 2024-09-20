@@ -5,7 +5,7 @@
 <img src="IMG_7775.png" class="center" id="logo">
 <img src="IMG_7794.png" class="floater" id="floater">
 <img class="menuToggle" id="menuToggler" src="IMG_7803.png" onclick="toggle()">
-<img class="menu" src="IMG_7820.png" id="menu">
+<div class="menu" id="menu"></div>
 <style>
   .menu {
     position: fixed;
@@ -17,6 +17,8 @@
     overflow-x: hidden;
     transition: 0.3s;
     z-index: 200;
+    background-image: url("IMG_7820.png");
+    background-size: cover;
   }
   .menuToggle {
     position: fixed;
