@@ -4,8 +4,19 @@
 <div class="firstBack"></div>
 <img src="IMG_7775.png" class="center" id="logo">
 <img src="IMG_7794.png" class="floater" id="floater">
-<img class="menuToggle" id="menuToggler" src="IMG_7803.png" onclick="toggle()">
+<div class="menu" id="menu"><img class="menuToggle" id="menuToggler" src="IMG_7803.png" onclick="toggle()"></div>
 <style>
+  .menu {
+    position: fixed;
+    height: 100%;
+    width: 25%;
+    left: 100%;
+    top: 0;
+    margin: 0;
+    background-image: url("IMG_7820.png");
+    overflow-x: hidden;
+    transition: left 0.3s;
+  }
   .menuToggle {
     position: fixed;
     width: 10vw;
@@ -57,10 +68,13 @@ body {
       for (i = 0; i < 6; i++) {
         setTimeout(nextFrame, ((i + 1) * 50), i + 1, true);
       }
+      document.getElementById("menu").left = "75%";
+      }
     } else if (phase == 6) {
       for (i = 0; i < 6; i++) {
         setTimeout(nextFrame, ((i + 1) * 50), 6 - i, false);
       }
+      document.getElementById("menu").left = "100%";
     } else {}
   }
   function nextFrame(frame, up) {
