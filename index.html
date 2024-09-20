@@ -67,7 +67,7 @@ body {
   position: absolute;
   z-index: 100;
   opacity: 0;
-  top: 50%;
+  top: 60%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -80,6 +80,8 @@ body {
   
 </style>
 <script>
+  document.getElementById("logo").style.opacity = 1;
+  document.getElementById("logo").style.top = 50 + "%";
   phase = 0;
   menu = document.getElementById("menuToggler");
   menuAt = document.getElementById("menu");
@@ -112,9 +114,6 @@ body {
       phase -= 1;
     }
   }
-  document.getElementById("logo").style.opacity = 1;
-  document.getElementById("logo").style.top = 50 + "%";
-  
   ratio = window.innerWidth / window.innerHeight;
   document.getElementById("test").innerHTML = ratio;
   function parallax() {
