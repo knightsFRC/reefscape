@@ -75,6 +75,10 @@ body {
   height: auto;
   margin: 0;
   }
+  .stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
 }
 
   
@@ -96,6 +100,7 @@ body {
       }
       menuAt.style.left = 75 + "%";
       menu.style.left = 65 + "%";
+      $('body').addClass('stop-scrolling');
       document.getElementById("darken").style.opacity = 1;
       document.getElementById("darken").style.zIndex = "195";
     } else if (phase == 6) {
@@ -104,6 +109,7 @@ body {
       }
       menuAt.style.left = 100 + "%";
       menu.style.left = 90 + "%";
+      $('body').removeClass('stop-scrolling');
       document.getElementById("darken").style.opacity = 0;
       setTimeout(function() {
       document.getElementById("darken").style.zIndex = "-200";
