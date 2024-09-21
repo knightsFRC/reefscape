@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<body onload="fadeIn()"></body>
+<body id="body" onload="fadeIn()"></body>
 <div class="firstBack"></div>
 <img src="IMG_7775.png" class="center" id="logo">
 <img src="IMG_7794.png" class="floater" id="floater">
@@ -84,6 +84,7 @@ body {
   
 </style>
 <script>
+  bodyEl = document.getElementById("body");
   function fadeIn() {
   document.getElementById("logo").style.opacity = 0;
   document.getElementById("logo").style.top = 60 + "%";
@@ -100,7 +101,7 @@ body {
       }
       menuAt.style.left = 75 + "%";
       menu.style.left = 65 + "%";
-      $('body').classList.add('stop-scrolling');
+      bodyEl.classList.add('stop-scrolling');
       document.getElementById("darken").style.opacity = 1;
       document.getElementById("darken").style.zIndex = "195";
     } else if (phase == 6) {
@@ -109,7 +110,7 @@ body {
       }
       menuAt.style.left = 100 + "%";
       menu.style.left = 90 + "%";
-      $('body').classList.remove('stop-scrolling');
+      bodyEl.classList.remove('stop-scrolling');
       document.getElementById("darken").style.opacity = 0;
       setTimeout(function() {
       document.getElementById("darken").style.zIndex = "-200";
