@@ -9,19 +9,19 @@
 <div class="menu" id="menu"></div>
 
 <img src="IMG_7822.png" class="darken" id="darken">
-<div class="info" id="info">
+<img src="IMG_7829.png" class="info" id="info">
 
 </div>
 <style>
   .info {
     width: 100vw;
-    height: 365vw;
-    background-image: url("IMG_7829.png");
+    height: auto;
+
     top: 85vh;
     left: 0;
     margin: 0;
     z-index: 175;
-    background-size: cover;
+
   }
   .darken {
     pointer-events: none;
@@ -99,7 +99,7 @@ body {
 </style>
 <script>
   ratio = window.innerHeight / window.innerWidth;
-  document.getElementById("info").style.top = 100 * ratio + 20 + "vw";
+  document.getElementById("info").style.top = 100 * ratio + 10 + "vw";
   bodyEl = document.getElementById("body");
   function fadeIn() {
   document.getElementById("logo").style.opacity = 0;
