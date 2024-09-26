@@ -111,6 +111,9 @@ body {
   ratio = h / w;
   document.getElementsByClassName("clickMe")[0].style.top = ratio * 100 + 27 + "vw";
   function adjust() {
+    h = window.innerHeight;
+    w = window.innerWidth;
+    ratio = h / w;
     document.getElementsByClassName("clickMe")[0].style.top = ratio * 100 + 27 + "vw";
   }
   document.getElementById("info").style.top = 0;
