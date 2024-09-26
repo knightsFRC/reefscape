@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<body id="body" onload="fadeIn()"></body>
+<body id="body" onresize="adjust()" onload="fadeIn()"></body>
 <div class="firstBack"></div>
 <img src="IMG_7775.png" class="center" id="logo">
 <img src="IMG_7843.png" class="info" id="info">
@@ -110,6 +110,9 @@ body {
   w = window.innerWidth;
   ratio = h / w;
   document.getElementsByClassName("clickMe")[0].style.top = ratio * 100 + 27 + "vw";
+  function adjust() {
+    document.getElementsByClassName("clickMe")[0].style.top = ratio * 100 + 27 + "vw";
+  }
   document.getElementById("info").style.top = 0;
   document.getElementById("info").style.top = 100 + "vh";
   bodyEl = document.getElementById("body");
