@@ -106,7 +106,9 @@ body {
   
 </style>
 <script>
-  ratio = window.innerHeight / window.innerWidth;
+  h = window.innerHeight;
+  w = window.innerWidth;
+  ratio = h / w;
   document.getElementsByClassName("clickMe")[0].style.top = ratio * 100 + 27 + "vw";
   document.getElementById("info").style.top = 0;
   document.getElementById("info").style.top = 100 + "vh";
