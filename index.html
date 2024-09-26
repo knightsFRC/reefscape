@@ -5,15 +5,20 @@
 <div class="firstBack"></div>
 <img src="IMG_7775.png" class="center" id="logo">
 <img src="IMG_7843.png" class="info" id="info">
+<img src="Add a heading.zip - 1.png" class="clickMe">
 <img src="IMG_7842.png" class="floater" id="floater">
 <img class="menuToggle" id="menuToggler" src="IMG_7803.png" onclick="toggle()">
 <div class="menu" id="menu"></div>
-
 <img src="IMG_7822.png" class="darken" id="darken">
 
 
 </div>
 <style>
+  .clickMe {
+    width: 7.5vw;
+    height: auto;
+    position: absolute;
+  }
   .info {
     z-index: 175;
     width: 100vw;
@@ -101,6 +106,7 @@ body {
 </style>
 <script>
   ratio = window.innerHeight / window.innerWidth;
+  document.getElementsByClassName("clickMe").style.top = ratio * 100 + 27.27 + "vw";
   document.getElementById("info").style.top = 0;
   document.getElementById("info").style.top = 100 + "vh";
   bodyEl = document.getElementById("body");
