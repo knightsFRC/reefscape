@@ -5,8 +5,9 @@
 <body id="body" onresize="adjust()" onload="fadeIn()"></body>
 <div class="firstBack"></div>
 <img src="IMG_7775.png" class="center" id="logo">
-<img src="IMG_7861.png" class="info" id="info">
-<img src="Add a heading.zip - 1.png" id="clickMe" class="clickMe">
+<div class="info" id="info">
+  <img src="Add a heading.zip - 1.png" id="clickMe" class="clickMe">
+</div>
 <img src="IMG_7842.png" class="floater" id="floater">
 <img class="menuToggle" id="menuToggler" src="IMG_7803.png" onclick="toggle()">
 <div class="menu" id="menu"></div>
@@ -23,6 +24,8 @@
     left: 0;
     margin: 0;
     position: absolute;
+    background-image: url("IMG_7861.png");
+    background-size: cover;
   }
   .clickMe {
       width: 7.5vw;
