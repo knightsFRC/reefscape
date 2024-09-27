@@ -25,11 +25,13 @@
     position: absolute;
   }
   .clickMe {
-        width: 7.5vw;
-        height: auto;
-        position: absolute;
-        z-index: 175;
-      }
+      width: 7.5vw;
+      height: auto;
+      position: absolute;
+      z-index: 175;
+      top: 0;
+      left: 0;
+  }
   .darken {
     pointer-events: none;
     z-index: -200;
@@ -112,12 +114,9 @@ body {
   h = window.innerHeight;
   w = window.innerWidth;
   ratio = h / w;
-  document.getElementsByClassName("clickMe")[0].style.top = "0";
+  
   function update() {
-    h = window.innerHeight;
-    w = window.innerWidth;
-    ratio = h / w;
-    document.getElementsByClassName("clickMe")[0].style.top = "0";
+
   }
   document.getElementById("info").style.top = 0;
   document.getElementById("info").style.top = 100 + "vh";
