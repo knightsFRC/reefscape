@@ -5,7 +5,8 @@
 <body id="body" onresize="adjust()" onload="fadeIn()"></body>
 <div class="firstBack"></div>
 <img src="IMG_7775.png" class="center" id="logo">
-<div class="info" id="info">
+<div class="info">
+  <img class="infoImg" id="info" src="IMG_7861.png">
   <img src="Add a heading.zip - 1.png" id="clickMe" class="clickMe">
 </div>
 <img src="IMG_7842.png" class="floater" id="floater">
@@ -17,6 +18,16 @@
 </div>
 <style>
   .info {
+    z-index: 175;
+    width: 100vw;
+    height: auto;
+    top: 85vh;
+    left: 0;
+    margin: 0;
+    position: absolute;
+  }
+  
+  .infoImg {
     z-index: 175;
     width: 100vw;
     height: auto;
