@@ -34,6 +34,16 @@
 
 </div>
 <style>
+  .pageLink {
+    position: fixed;
+    width: 26%;
+    height: auto;
+    left: 102%;
+    margin: 0;
+    overflow-x: hidden;
+    transition: 0.3s;
+    z-index: 210;
+  }
   .info {
     z-index: 175;
     width: 100vw;
@@ -179,6 +189,9 @@ body {
       }
       menuAt.style.left = 75 + "%";
       menu.style.left = 65 + "%";
+      for (i = 0; i < 8; i++) {
+        document.getElementById("pl" + (i + 1).toString()).style.left: 72 + "%";
+      }
       bodyEl.classList.add('stop-scrolling');
       document.getElementById("darken").style.opacity = 1;
       document.getElementById("darken").style.zIndex = "195";
@@ -188,6 +201,9 @@ body {
       }
       menuAt.style.left = 100 + "%";
       menu.style.left = 90 + "%";
+      for (i = 0; i < 8; i++) {
+        document.getElementById("pl" + (i + 1).toString()).style.left: 102 + "%";
+      }
       bodyEl.classList.remove('stop-scrolling');
       document.getElementById("darken").style.opacity = 0;
       setTimeout(function() {
