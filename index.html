@@ -15,7 +15,6 @@
 
 </div>
 <style>
-  
   .info {
     z-index: 175;
     width: 100vw;
@@ -24,13 +23,13 @@
     left: 0;
     margin: 0;
     position: absolute;
-      .clickMe {
+  }
+  .clickMe {
         width: 7.5vw;
         height: auto;
         position: absolute;
         z-index: 175;
       }
-  }
   .darken {
     pointer-events: none;
     z-index: -200;
@@ -109,6 +108,7 @@ body {
   
 </style>
 <script>
+  document.getElementById("info").appendChild(document.getElementById("clickMe"));
   h = window.innerHeight;
   w = window.innerWidth;
   ratio = h / w;
