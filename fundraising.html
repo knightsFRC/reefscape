@@ -7,7 +7,7 @@
 <div class="info">
   <img src="info.zip - 1.png" class="static">
   <video class="tiers" autoplay loop muted>
-    <source src="silver.mp4">
+    <source src="silver.mp4" type="video/mp4" >
   </video>
 </div>
 <style>
@@ -69,7 +69,6 @@
 <script>
   
   function fadeIn() {
-  document.getElementsByClassName("tiers")[0].play();
   document.getElementById("logo").style.opacity = 1;
   document.getElementById("logo").style.top = 25 + "%";
   }
