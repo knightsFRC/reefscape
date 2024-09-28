@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="waterContainer">
 <video class="water" autoplay loop muted>
   <source src="Add a heading (1366 x 769 px.mp4">
 </video>
+</div>
 <style>
-  .water {
-    height: 45%;
+  .waterContainer {
+    height: 100%;
     width: 100%;
     margin: 0;
     position: absolute;
     top: 0;
     left: 0;
   }
+  .water {
+    min-height: 100%;
+    min-width: 100%;
+  }
   body { margin: 0; padding: 0; }
 </style>
+<script>
+  document.getElementsByClassName("waterContainer")[0].appendChild(document.getElementsByClassName("water")[0]);
+</script>
 <html><body>
 </body></html>
