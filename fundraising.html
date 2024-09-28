@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<body onload="playVids()">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<video id="water" class="water" autoplay loop muted>
-  <source src="Add a heading (1366 x 769 px.mov">
-</video>
+<div class="water"></div>
 <div class="fundLogoCont"><img src="info.zip - 3.png" class="fundLogo"></div>
 <div class="info">
   <img src="info.zip - 1.png" class="static">
-  <video id="tiers" class="tiers" loop muted>
+  <video class="tiers" autoplay loop muted>
     <source src="silver.mp4">
   </video>
 </div>
@@ -53,9 +50,11 @@
     position: absolute;
   }
   .water {
+    background-image: url("info.png");
+    background-size: cover;
     z-index: 0;
     width: 100%;
-    height: auto;
+    height: 55%;
     top: 0;
     left: 0;
     margin: 0;
@@ -64,9 +63,6 @@
   body { margin: 0; padding: 0; }
 </style>
 <script>
-  function playVids() {
-    document.getElementById("tiers").play();
-  }
 </script>
 <html><body>
 </body></html>
