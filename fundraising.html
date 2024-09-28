@@ -42,9 +42,11 @@
     z-Index: 1;
   }
   .fundLogo {
+    transition: 1s;
     width: 80%;
     height: auto;
-    top: 22.5%;
+    top: 35%;
+    opacity: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
@@ -63,6 +65,10 @@
   body { margin: 0; padding: 0; }
 </style>
 <script>
+  document.getElementById("logo").style.opacity = 0;
+  document.getElementById("logo").style.top = 35 + "%";
+  document.getElementById("logo").style.opacity = 1;
+  document.getElementById("logo").style.opacity = 25 + "%";
 </script>
 <html><body>
 </body></html>
