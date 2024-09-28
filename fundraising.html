@@ -123,12 +123,48 @@
   }
   body { margin: 0; padding: 0; }
 </style> 
-<script>
-  
+<script> 
   function fadeIn() {
   document.getElementById("logo").style.transition = 1 + "s";
   document.getElementById("logo").style.opacity = 1;
   document.getElementById("logo").style.top = 25 + "%";
+  }
+  function toggle() {
+    if (phase == 0) {
+      for (i = 0; i < 6; i++) {
+        setTimeout(nextFrame, ((i + 1) * 50), i + 1, true);
+      }
+      menuAt.style.left = 75 + "%";
+      menu.style.left = 65 + "%";
+      for (i = 0; i < 8; i++) {
+        document.getElementById("pl" + (i + 1).toString()).style.left = 77 + "%";
+      }
+      bodyEl.classList.add('stop-scrolling');
+      document.getElementById("darken").style.opacity = 1;
+      document.getElementById("darken").style.zIndex = "195";
+    } else if (phase == 6) {
+      for (i = 0; i < 6; i++) {
+        setTimeout(nextFrame, ((i + 1) * 50), 6 - i, false);
+      }
+      menuAt.style.left = 100 + "%";
+      menu.style.left = 90 + "%";
+      for (i = 0; i < 8; i++) {
+        document.getElementById("pl" + (i + 1).toString()).style.left = 107 + "%";
+      }
+      bodyEl.classList.remove('stop-scrolling');
+      document.getElementById("darken").style.opacity = 0;
+      setTimeout(function() {
+      document.getElementById("darken").style.zIndex = "-200";
+      }, 300);
+    } else {}
+  }
+  function nextFrame(frame, up) {
+    menu.src = "IMG_780".concat((frame + 2).toString(), ".png");
+    if (up == true) {
+      phase += 1;
+    } else {
+      phase -= 1;
+    }
   }
 </script>
 </body></html>
