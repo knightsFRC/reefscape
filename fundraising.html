@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+<html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body onload="fadeIn()">
 <div class="water"></div>
 <div class="fundLogoCont"><img src="info.zip - 3.png" class="fundLogo"></div>
 <div class="info">
@@ -65,11 +67,13 @@
   body { margin: 0; padding: 0; }
 </style> 
 <script>
+  
+  function fadeIn() {
   document.getElementsByClassName("tiers")[0].play();
   document.getElementById("logo").style.opacity = 0;
   document.getElementById("logo").style.top = 35 + "%";
   document.getElementById("logo").style.opacity = 1;
   document.getElementById("logo").style.top = 25 + "%";
+  }
 </script>
-<html><body>
 </body></html>
