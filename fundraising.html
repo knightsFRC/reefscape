@@ -44,7 +44,7 @@
     z-Index: 1;
   }
   .fundLogo {
-    transition: opacity 1s top 1s;
+    transition: 0s;
     width: 80%;
     height: auto;
     top: 35%;
@@ -69,6 +69,7 @@
 <script>
   
   function fadeIn() {
+  document.getElementById("logo").style.transition = 1 + "s";
   document.getElementById("logo").style.opacity = 1;
   document.getElementById("logo").style.top = 25 + "%";
   }
