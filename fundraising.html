@@ -129,6 +129,10 @@
   document.getElementById("logo").style.opacity = 1;
   document.getElementById("logo").style.top = 25 + "%";
   }
+  phase = 0;
+  bodyEl = document.getElementById("body");
+  menu = document.getElementById("menuToggler");
+  menuAt = document.getElementById("menu");
   function toggle() {
     if (phase == 0) {
       for (i = 0; i < 6; i++) {
