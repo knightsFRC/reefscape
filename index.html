@@ -239,6 +239,14 @@ body {
 window.addEventListener("scroll", function(){
     parallax(); 
 });
+  function popUp() {
+    document.getElementById("popUp").zIndex = 300;
+    document.getElementById("popUp").opacity = 1;
+  }
+  function unPopUp() {
+    document.getElementById("popUp").zIndex = -400;
+    document.getElementById("popUp").opacity = 0;
+  }
   /*
 window.addEventListener("scroll", function() {
   var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
