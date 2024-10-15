@@ -9,13 +9,13 @@
   <img class="infoImg" src="IMG_7889.png">
   <a href="mailto: zdean@nrcaknights.com"><img src="Add a heading.zip - 1.png" style="left: 9.33vw" id="clickMe" class="clickMe"></a>
   <a href="https://youtube.com/@nrcarobotics?si=PTQOen2TCSb-2hhx"><img src="Add a heading.zip - 2.png" style="left: 26.16vw" id="clickMe" class="clickMe"></a>
-  <a href="https://instagram.com/nrcaknightsrobotics"><img src="Add a heading.zip - 3.png" style="left: 66.32vw" id="clickMe" class="clickMe"></a>
-  <a href="https://www.gofundme.com/f/christian-robotics-club-team-8746-knights"><img src="Add a heading.zip - 4.png" style="left: 83.15vw" id="clickMe" class="clickMe"></a>
+  <a href="https://instagram.com/nrcaknightsrobotics"><img src="Add a heading.zip - 3.png" style="left: 66.32vw" id="clickMe" onclick="popUp()" class="clickMe">
+  <img src="Add a heading.zip - 4.png" style="left: 83.15vw" id="clickMe" class="clickMe"></a>
   <a href="fundraising.html"><img src="IMG_7868.png" style="left: 42.99vw" id="clickMe" class="clickMe2"></a>
   <a href="mailto: zdean@nrcaknights.com"><img src="Add a heading.zip - 1.png" style="left: 9.33vw" id="clickMe" class="clickMeL"></a>
   <a href="https://youtube.com/@nrcarobotics?si=PTQOen2TCSb-2hhx"><img src="Add a heading.zip - 2.png" style="left: 26.16vw" id="clickMe" class="clickMeL"></a>
   <a href="https://instagram.com/nrcaknightsrobotics"><img src="Add a heading.zip - 3.png" style="left: 66.32vw" id="clickMe" class="clickMeL"></a>
-  <a href="https://www.gofundme.com/f/christian-robotics-club-team-8746-knights"><img src="Add a heading.zip - 4.png" style="left: 83.15vw" id="clickMe" class="clickMeL"></a>
+  <img src="Add a heading.zip - 4.png" style="left: 83.15vw" id="clickMe" onclick="popUp()" class="clickMeL">
   <iframe class="youTube"
   src="https://www.youtube.com/embed/9keeDyFxzY4">
   </iframe>
@@ -28,15 +28,26 @@
   <a href="fundraising.html"><img class="pageLink" style="top: 11vw;" id="pl3" src="CLICK HERE! (1400 x 700 px) (1400 x 360 px) - 3.png"></a>
   <a href="https://youtube.com/@nrcarobotics?si=PTQOen2TCSb-2hhx"><img class="pageLink" style="top: 16vw;" id="pl4" src="CLICK HERE! (1400 x 700 px) (1400 x 360 px) - 4.png"></a>
   <a href="https://instagram.com/nrcaknightsrobotics"><img class="pageLink" style="top: 21vw;" id="pl5" src="CLICK HERE! (1400 x 700 px) (1400 x 360 px) - 5.png"></a>
-  <a href="https://www.gofundme.com/f/christian-robotics-club-team-8746-knights"><img class="pageLink" style="top: 26vw;" id="pl6" src="CLICK HERE! (1400 x 700 px) (1400 x 360 px) - 6.png"></a>
+  <img class="pageLink" style="top: 26vw;" id="pl6" src="CLICK HERE! (1400 x 700 px) (1400 x 360 px) - 6.png" onclick="popUp()">
   <a href="mailto: zdean@nrcaknights.com"><img class="pageLink" style="top: 31vw;" id="pl7" src="CLICK HERE! (1400 x 700 px) (1400 x 360 px) - 7.png"></a>
   <img class="pageLink" style="bottom: 1vw;" id="pl8" src="CLICK HERE! (1400 x 700 px) (1400 x 360 px) - 8.png">
 </div>
 <img src="IMG_7822.png" class="darken" id="darken">
+<a href="https://give.cornerstone.cc/nrcaknights" onclick="unPopUp()"><div id="popUp" class="popUp"></div></a>
 
 
 </div>
 <style>
+  .popUp {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("IMG_8127.png");
+    background-position: 50%;
+    background-size: cover;
+    z-index: -400;
+    opacity: 0;
+  }
   .youTube {
     top: 195.5vw;
     position: absolute;
